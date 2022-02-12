@@ -2,6 +2,12 @@ for run all tests
 "bazel test --test_output=all //:sample1_unittest"
 
 
+"bazel build //simulink_example:our_model" //  simulink model build
+remzi ke
+
+"bazel test --test_output=ALL //simulink_example:our_model_unittest" // simulink model test example
+
+
 adımlar // 
 - Google test ile dextool mutate toolu kullanabilir mi (şuan hata veriyor)
 - Bazelisk kullanan test.sh, build.sh oluşturabilir mi ?
