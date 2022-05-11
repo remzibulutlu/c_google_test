@@ -2,6 +2,8 @@ pipeline {
   agent {
     docker {
       image 'haliliceylan/vscode-bazel-dextool-environment:latest'
+      args '''--user vscode
+-w /workspaces'''
     }
 
   }
