@@ -10,9 +10,11 @@ pipeline {
   stages {
     stage('check') {
       steps {
+        sh 'whoami'
+        sh 'cat /etc/passwd'
+        sh 'uname -a'
         sh 'dextool --help'
         sh 'cmake --help'
-        sh 'uname -a'
       }
     }
 
