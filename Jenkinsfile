@@ -10,12 +10,17 @@ pipeline {
   stages {
     stage('check') {
       steps {
-        sh 'ls -R /opt'
         sh 'whoami'
-        sh 'cat /etc/passwd'
         sh '/opt/dextool_install/bin/dextool --help'
-        sh 'uname -a'
         sh 'cmake --help'
+        sh 'uname -a'
+      }
+    }
+
+    stage('build') {
+      steps {
+        sh '''cd simulink_example_cmake/bacteria-simulink/our_model_grt_rtw
+./setup.sh'''
       }
     }
 
