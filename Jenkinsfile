@@ -6,8 +6,10 @@ pipeline {
 
   }
   stages {
-    stage('') {
+    stage('check') {
       steps {
+        sh 'dextool --help'
+        sh 'cmake --help'
         sh 'uname -a'
       }
     }
